@@ -103,7 +103,7 @@ ruby module4/session2/<?>.rb
 #### [Session #3](https://github.com/rgxcp/GGIntermediate/blob/master/module4/session3)
 
 ```bash
-ruby module4/session2/<?>.rb
+ruby module4/session3/<?>.rb
 ```
 
 ### [Module #5](https://github.com/rgxcp/GGIntermediate/blob/master/module5)
