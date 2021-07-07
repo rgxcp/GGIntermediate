@@ -20,7 +20,7 @@ class Game
     end
 
     def deflect?
-        rand(100) > 80 ? true : false
+        rand(100) < 80 ? true : false
     end
 
     def finished?
