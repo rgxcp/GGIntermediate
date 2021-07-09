@@ -37,7 +37,7 @@ ruby module1/session1/app.rb
 #### [Session #2](https://github.com/rgxcp/GGIntermediate/blob/master/module1/session2)
 
 ```bash
-ruby module1/session2/<?>.rb
+ruby module1/session2/app.rb
 ```
 
 #### [Session #3](https://github.com/rgxcp/GGIntermediate/blob/master/module1/session3)
