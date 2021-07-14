@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Lists</title>
+</head>
+<body>
+    <a href="/lists/new">
+        <button>Add New List</button>
+    </a>
+
+    <ul>
+        <% lists.each do |list| %>
+            <li><%= list %></li>
+        <% end %>
+    </ul>
+</body>
+</html>
