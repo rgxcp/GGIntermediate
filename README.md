@@ -6,7 +6,13 @@ LEARNING
 
 ## Requirement(s)
 
-1. Ruby v3.0.1 with rbenv
+1. Ruby
+2. MySQL/MariaDB
+
+## Gem(s)
+
+1. sinatra
+2. sinatra-contrib
 
 ## How to Use
 
@@ -40,7 +46,7 @@ ruby module1/session1/app.rb
 ruby module1/session2/app.rb
 ```
 
-#### [Session #3](https://github.com/rgxcp/GGIntermediate/tree/master/module1/session3)
+#### [Session #3 (No Homework)](https://github.com/rgxcp/GGIntermediate/tree/master/module1/session3)
 
 ```bash
 ruby module1/session3/app.rb
@@ -48,17 +54,13 @@ ruby module1/session3/app.rb
 
 ### [Module #2](https://github.com/rgxcp/GGIntermediate/tree/master/module2)
 
-#### [Session #1](https://github.com/rgxcp/GGIntermediate/tree/master/module2/session1)
+#### [Session #1 (No Homework)](https://github.com/rgxcp/GGIntermediate/tree/master/module2/session1)
 
 ```bash
 ruby module2/session1/web.rb
 ```
 
-#### [Session #2](https://github.com/rgxcp/GGIntermediate/tree/master/module2/session2)
-
-```bash
-ruby module2/session2/<?>.rb
-```
+#### [Session #2 (No Homework)](https://github.com/rgxcp/GGIntermediate/tree/master/module2/session2)
 
 #### [Session #3](https://github.com/rgxcp/GGIntermediate/tree/master/module2/session3)
 
