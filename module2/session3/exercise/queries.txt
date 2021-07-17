@@ -1,0 +1,33 @@
+#1
+SELECT items.*, categories.name AS "category_name"
+FROM items
+JOIN item_categories ON items.id = item_categories.item_id
+JOIN categories ON categories.id = item_categories.category_id;
+
+#2
+SELECT items.id, items.name
+FROM items
+JOIN item_categories ON items.id = item_categories.item_id
+JOIN categories ON categories.id = item_categories.category_id
+WHERE categories.name = "Main Dish";
+
+#3
+SELECT items.*
+FROM items
+JOIN item_categories ON items.id = item_categories.item_id
+JOIN categories ON categories.id = item_categories.category_id
+WHERE categories.name = "Main Dish" AND items.price > 30000;
+
+#4
+SELECT items.*
+FROM items
+LEFT JOIN item_categories ON items.id = item_categories.item_id
+WHERE item_id IS NULL;
+
+#5
+SELECT DISTINCT categories.id, categories.name, GROUP_CONCAT(items.name) AS "names", MAX(items.price) AS "highest_price"
+FROM categories
+JOIN item_categories ON categories.id = item_categories.category_id
+JOIN items ON item_categories.item_id = items.id
+GROUP BY categories.name
+ORDER BY id;

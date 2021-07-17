@@ -1,0 +1,65 @@
+#2
+CREATE TABLE customers(
+id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(50) NOT NULL,
+phone_number VARCHAR(13) NOT NULL UNIQUE
+);
+
+CREATE TABLE orders(
+id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+customer_id INT NOT NULL,
+date DATE NOT NULL,
+FOREIGN KEY(customer_id) REFERENCES customers(id)
+);
+
+CREATE TABLE order_details(
+id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+order_id INT NOT NULL,
+item_id INT NOT NULL,
+quantity INT NOT NULL,
+each_price INT NOT NULL,
+total_price INT NOT NULL,
+FOREIGN KEY(order_id) REFERENCES orders(id),
+FOREIGN KEY(item_id) REFERENCES items(id)
+);
+
+#3
+INSERT INTO customers(name, phone_number) VALUES
+("John Doe", "081239173492"),
+("Jane Doe", "081294720146"),
+("Jack Doe", "081264837593"),
+("June Doe", "081275835792"),
+("Jery Doe", "081275739564");
+
+INSERT INTO orders(customer_id, date) VALUES
+(1, "2021-07-13"),
+(2, "2021-07-14"),
+(3, "2021-07-15"),
+(4, "2021-07-16"),
+(5, "2021-07-17");
+
+INSERT INTO order_details(order_id, item_id, quantity, each_price, total_price) VALUES
+(1, 1, 1, 25000, 25000),
+(1, 2, 2, 2000, 4000),
+(2, 2, 1, 2000, 2000),
+(2, 3, 2, 40000, 80000),
+(3, 3, 1, 40000, 40000),
+(3, 4, 2, 18000, 36000),
+(4, 4, 1, 18000, 18000),
+(4, 5, 2, 15000, 30000),
+(5, 5, 1, 15000, 15000),
+(5, 6, 2, 13000, 26000);
+
+#4
+SELECT
+orders.id AS "Order ID",
+orders.date AS "Order Date",
+customers.name AS "Customer Name",
+customers.phone_number AS "Customer Phone Number",
+SUM(order_details.total_price) AS "Total Price",
+GROUP_CONCAT(items.name SEPARATOR ", ") AS "Items Bought"
+FROM orders
+JOIN customers ON orders.customer_id = customers.id
+JOIN order_details ON orders.id = order_details.order_id
+JOIN items ON order_details.item_id = items.id
+GROUP BY order_details.order_id;
