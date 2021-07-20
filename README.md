@@ -61,7 +61,7 @@ ruby module1/session2/app.rb
 #### [Session #1](https://github.com/rgxcp/GGIntermediate/tree/master/module3/session1)
 
 ```bash
-ruby module3/session1/<?>.rb
+ruby module3/session1/web.rb
 ```
 
 #### [Session #2](https://github.com/rgxcp/GGIntermediate/tree/master/module3/session2)
