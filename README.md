@@ -13,6 +13,7 @@ LEARNING
 
 1. sinatra
 2. sinatra-contrib
+3. mysql2
 
 ## How to Use
 
@@ -61,7 +62,7 @@ ruby module1/session2/app.rb
 #### [Session #1](https://github.com/rgxcp/GGIntermediate/tree/master/module3/session1)
 
 ```bash
-ruby module3/session1/web.rb
+ruby module3/session1/router.rb
 ```
 
 #### [Session #2](https://github.com/rgxcp/GGIntermediate/tree/master/module3/session2)
