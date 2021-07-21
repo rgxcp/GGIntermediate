@@ -65,11 +65,7 @@ ruby module1/session2/app.rb
 ruby module3/session1/router.rb
 ```
 
-#### [Session #2](https://github.com/rgxcp/GGIntermediate/tree/master/module3/session2)
-
-```bash
-ruby module3/session2/<?>.rb
-```
+#### [Session #2 (No Homework)](https://github.com/rgxcp/GGIntermediate/tree/master/module3/session2)
 
 #### [Session #3](https://github.com/rgxcp/GGIntermediate/tree/master/module3/session3)
 
