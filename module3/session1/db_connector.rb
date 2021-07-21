@@ -44,17 +44,11 @@ end
 
 def get_item(id)
     client = create_db_client
-    row = client.query(
-        "SELECT items.id, items.name, items.price, categories.id AS category_id, categories.name AS category_name
-        FROM items
-        JOIN item_categories
-        ON items.id = item_categories.item_id
-        JOIN categories
-        ON item_categories.category_id = categories.id
-        WHERE items.id = #{id}"
-    ).first
-    category = Category.new(row["category_id"], row["category_name"])
-    item = Item.new(row["id"], row["name"], row["price"], category)
+    item_row = client.query("SELECT id, name, price FROM items WHERE id = #{id}").first
+    item_category_row = client.query("SELECT category_id FROM item_categories WHERE item_id = #{id}").first
+    category_row = client.query("SELECT id, name FROM categories WHERE id = #{item_category_row["category_id"]}").first
+    category = Category.new(category_row["id"], category_row["name"])
+    item = Item.new(item_row["id"], item_row["name"], item_row["price"], category)
 end
 
 def create_item(name, price, category_id)
