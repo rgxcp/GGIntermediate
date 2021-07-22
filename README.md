@@ -1,4 +1,4 @@
-# Ruby - GenerasiGIGIH Intermediate Level Homeworks
+# Ruby - Generasi GIGIH Intermediate Level Homeworks
 
 ## Status
 
