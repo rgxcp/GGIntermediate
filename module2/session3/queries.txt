@@ -62,4 +62,4 @@ FROM orders
 JOIN customers ON orders.customer_id = customers.id
 JOIN order_details ON orders.id = order_details.order_id
 JOIN items ON order_details.item_id = items.id
-GROUP BY order_details.order_id;
+GROUP BY orders.id;
