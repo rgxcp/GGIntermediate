@@ -10,7 +10,7 @@ class Item
         @category = category
     end
 
-    def Item.all
+    def self.all
         client = create_db_client
         rows = client.query(
             "SELECT items.id, items.name, items.price, categories.id AS category_id, categories.name AS category_name
@@ -30,7 +30,7 @@ class Item
         items
     end
 
-    def Item.find(id)
+    def self.find(id)
         client = create_db_client
         item_row = client.query("SELECT id, name, price FROM items WHERE id = #{id}").first
         item_category_row = client.query("SELECT category_id FROM item_categories WHERE item_id = #{id}").first
@@ -39,19 +39,19 @@ class Item
         item = Item.new(item_row["id"], item_row["name"], item_row["price"], category)
     end
 
-    def Item.create(name, price, category_id)
+    def self.create(name, price, category_id)
         client = create_db_client
         client.query("INSERT INTO items(name, price) VALUES('#{name}', #{price})")
         client.query("INSERT INTO item_categories(item_id, category_id) VALUES(#{client.last_id}, #{category_id})")
     end
 
-    def Item.update(id, name, price, category_id)
+    def self.update(id, name, price, category_id)
         client = create_db_client
         client.query("UPDATE items SET name = '#{name}', price = #{price} WHERE id = #{id}")
         client.query("UPDATE item_categories SET category_id = #{category_id} WHERE item_id = #{id}")
     end
 
-    def Item.destroy(id)
+    def self.destroy(id)
         client = create_db_client
         client.query("DELETE FROM item_categories WHERE item_id = #{id}")
         client.query("DELETE FROM items WHERE id = #{id}")

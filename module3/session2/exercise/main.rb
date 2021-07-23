@@ -4,29 +4,29 @@ require_relative "models/category"
 require_relative "models/item"
 
 get "/" do
-    items = Item.all
+    items = Item::all
     erb :index, locals: {
         items: items
     }
 end
 
 get "/items/new" do
-    categories = Category.all
+    categories = Category::all
     erb :create, locals: {
         categories: categories
     }
 end
 
 get "/items/:id/show" do
-    item = Item.find(params[:id])
+    item = Item::find(params[:id])
     erb :show, locals: {
         item: item
     }
 end
 
 get "/items/:id/edit" do
-    item = Item.find(params[:id])
-    categories = Category.all
+    item = Item::find(params[:id])
+    categories = Category::all
     erb :edit, locals: {
         item: item,
         categories: categories
@@ -34,7 +34,7 @@ get "/items/:id/edit" do
 end
 
 post "/items/create" do
-    Item.create(
+    Item::create(
         params[:name],
         params[:price],
         params[:category_id]
@@ -43,7 +43,7 @@ post "/items/create" do
 end
 
 put "/items/:id/update" do
-    Item.update(
+    Item::update(
         params[:id],
         params[:name],
         params[:price],
@@ -53,6 +53,6 @@ put "/items/:id/update" do
 end
 
 delete "/items/:id/destroy" do
-    Item.destroy(params[:id])
+    Item::destroy(params[:id])
     redirect "/"
 end

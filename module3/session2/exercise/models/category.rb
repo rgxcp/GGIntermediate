@@ -8,7 +8,7 @@ class Category
         @name = name
     end
 
-    def Category.all
+    def self.all
         client = create_db_client
         rows = client.query("SELECT * FROM categories ORDER BY name ASC")
         categories = []
