@@ -11,9 +11,10 @@ LEARNING
 
 ## Gem(s)
 
-1. sinatra
-2. sinatra-contrib
-3. mysql2
+1. mysql2
+2. sinatra
+3. sinatra-contrib
+4. thin
 
 ## How to Use
 
