@@ -71,7 +71,8 @@ ruby module3/session1/router.rb
 #### [Session #3](https://github.com/rgxcp/GGIntermediate/tree/master/module3/session3)
 
 ```bash
-ruby module3/session3/<?>.rb
+cd module3/session3
+rackup -p 4567
 ```
 
 ### [Module #4](https://github.com/rgxcp/GGIntermediate/tree/master/module4)

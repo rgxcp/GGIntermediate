@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Items - Create</title>
+</head>
+<body>
+    <h1>Create Item</h1>
+    <form action="/items" method="POST">
+        <label>Name</label>
+        <br>
+        <input type="text" name="name" placeholder="Item name" required>
+        <br>
+        <br>
+        <label>Price</label>
+        <br>
+        <input type="number" name="price" placeholder="Item price" required>
+        <br>
+        <br>
+        <label>Categories</label>
+        <br>
+        <% @categories.each do |category| %>
+            <input type="checkbox" name="category_ids[]" value="<%= category.id %>">
+            <label><%= category.name %></label>
+            <br>
+        <% end %>
+        <br>
+        <input type="submit" value="Create">
+    </form>
+</body>
+</html>
