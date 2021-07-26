@@ -12,9 +12,10 @@ LEARNING
 ## Gem(s)
 
 1. mysql2
-2. sinatra
-3. sinatra-contrib
-4. thin
+2. rspec
+3. sinatra
+4. sinatra-contrib
+5. thin
 
 ## How to Use
 
