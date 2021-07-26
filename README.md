@@ -77,11 +77,7 @@ rackup -p 4567
 
 ### [Module #4](https://github.com/rgxcp/GGIntermediate/tree/master/module4)
 
-#### [Session #1](https://github.com/rgxcp/GGIntermediate/tree/master/module4/session1)
-
-```bash
-ruby module4/session1/<?>.rb
-```
+#### [Session #1 (No Homework)](https://github.com/rgxcp/GGIntermediate/tree/master/module4/session1)
 
 #### [Session #2](https://github.com/rgxcp/GGIntermediate/tree/master/module4/session2)
 
