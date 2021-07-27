@@ -1,5 +1,5 @@
 class WLI
-    attr_accessor :names
+    attr_writer :names
 
     def initialize
         @names = []
