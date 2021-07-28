@@ -12,4 +12,10 @@ describe IntegerArrayIncrementer do
         output = iai.increment([1])
         expect(output).to eq([2])
     end
+
+    it "should return [1, 0] when input is [9]" do
+        iai = IntegerArrayIncrementer.new
+        output = iai.increment([9])
+        expect(output).to eq([1, 0])
+    end
 end
