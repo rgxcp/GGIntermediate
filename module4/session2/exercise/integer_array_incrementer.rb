@@ -3,7 +3,9 @@ class IntegerArrayIncrementer
         if input == [9]
             [1, 0]
         else
-            [input.last + 1]
+            last_digit = input[-1] + 1
+            input[-1] = last_digit
+            input
         end
     end
 end
