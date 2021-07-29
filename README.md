@@ -13,9 +13,10 @@ LEARNING
 
 1. mysql2
 2. rspec
-3. sinatra
-4. sinatra-contrib
-5. thin
+3. simplecov
+4. sinatra
+5. sinatra-contrib
+6. thin
 
 ## How to Use
 
@@ -80,11 +81,7 @@ rackup -p 4567
 
 #### [Session #1 (No Homework)](https://github.com/rgxcp/GGIntermediate/tree/master/module4/session1)
 
-#### [Session #2](https://github.com/rgxcp/GGIntermediate/tree/master/module4/session2)
-
-```bash
-ruby module4/session2/<?>.rb
-```
+#### [Session #2 (No Homework)](https://github.com/rgxcp/GGIntermediate/tree/master/module4/session2)
 
 #### [Session #3](https://github.com/rgxcp/GGIntermediate/tree/master/module4/session3)
 
