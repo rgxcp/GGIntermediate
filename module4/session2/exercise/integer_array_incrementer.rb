@@ -1,10 +1,15 @@
 class IntegerArrayIncrementer
     def increment(input)
-        if input == [9]
-            [1, 0]
+        input[-1] = input.last + 1
+        if input.last == 10
+            if input.one?
+                [1, 0]
+            else
+                input[-1] = 0
+                input[-2] += 1
+                input
+            end
         else
-            last_digit = input[-1] + 1
-            input[-1] = last_digit
             input
         end
     end
