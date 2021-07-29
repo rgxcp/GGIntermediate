@@ -30,4 +30,10 @@ describe IntegerArrayIncrementer do
         output = iai.increment([1, 9])
         expect(output).to eq([2, 0])
     end
+
+    it "should return [2, 3, 0] when input is [2, 2, 9]" do
+        iai = IntegerArrayIncrementer.new
+        output = iai.increment([2, 2, 9])
+        expect(output).to eq([2, 3, 0])
+    end
 end
