@@ -86,7 +86,12 @@ rackup -p 4567
 #### [Session #3](https://github.com/rgxcp/GGIntermediate/tree/master/module4/session3)
 
 ```bash
-ruby module4/session3/<?>.rb
+cd module4/session3
+rspec -fd spec/controllers/categories_controller_spec.rb
+rspec -fd spec/controllers/category_items_controller_spec.rb
+rspec -fd spec/controllers/items_controller_spec.rb
+rspec -fd spec/models/category.rb
+rspec -fd spec/models/item.rb
 ```
 
 ### [Module #5](https://github.com/rgxcp/GGIntermediate/tree/master/module5)
