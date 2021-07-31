@@ -90,8 +90,8 @@ cd module4/session3
 rspec -fd spec/controllers/categories_controller_spec.rb
 rspec -fd spec/controllers/category_items_controller_spec.rb
 rspec -fd spec/controllers/items_controller_spec.rb
-rspec -fd spec/models/category.rb
-rspec -fd spec/models/item.rb
+rspec -fd spec/models/category_spec.rb
+rspec -fd spec/models/item_spec.rb
 ```
 
 ### [Module #5](https://github.com/rgxcp/GGIntermediate/tree/master/module5)
