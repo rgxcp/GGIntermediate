@@ -8,6 +8,9 @@ LEARNING
 
 1. Ruby
 2. MySQL/MariaDB
+3. Ansible
+4. Vagrant
+5. VirtualBox
 
 ## Gem(s)
 
