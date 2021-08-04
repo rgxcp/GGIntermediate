@@ -98,11 +98,7 @@ rspec -fd spec/models/item_spec.rb
 
 #### [Session #1 (No Homework)](https://github.com/rgxcp/GGIntermediate/tree/master/module5/session1)
 
-#### [Session #2](https://github.com/rgxcp/GGIntermediate/tree/master/module5/session2)
-
-```bash
-ruby module5/session2/<?>.rb
-```
+#### [Session #2 (No Homework)](https://github.com/rgxcp/GGIntermediate/tree/master/module5/session2)
 
 #### [Session #3](https://github.com/rgxcp/GGIntermediate/tree/master/module5/session3)
 
