@@ -1,0 +1,16 @@
+[Unit]
+Description=Sinatra application
+
+[Service]
+User=vagrant
+WorkingDirectory=/home/vagrant/app
+ExecStart=/home/vagrant/.rbenv/shims/ruby web.rb
+Restart=on-failure
+Environment="ENV=production"
+Environment="GG_DB_HOST=localhost"
+Environment="GG_DB_USERNAME=vagrant"
+Environment="GG_DB_PASSWORD=vagrant"
+Environment="GG_DB_DATABASE=food_oms"
+
+[Install]
+WantedBy=multi-user.target
