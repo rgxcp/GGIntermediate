@@ -54,9 +54,9 @@
         chdir: /home/vagrant/app
         cmd: tar -xvf bundle.tar.gz
     - name: Removing bundle.tar.gz file
-      shell:
-        chdir: /home/vagrant/app
-        cmd: rm bundle.tar.gz
+      file:
+        path: /home/vagrant/app/bundle.tar.gz
+        state: absent
     - name: Creating database user 'vagrant' and password 'vagrant' with all privileges
       become: yes
       mysql_user:
@@ -77,17 +77,23 @@
         state: import
         target: /home/vagrant/app/food_oms.sql
     - name: Removing 'food_oms.sql' file
-      shell:
-        chdir: /home/vagrant/app
-        cmd: rm food_oms.sql
+      file:
+        path: /home/vagrant/app/food_oms.sql
+        state: absent
     - name: Copying 'sinatra.service' file to /etc/systemd/system
       become: yes
       shell:
         chdir: /home/vagrant/app
         cmd: cp sinatra.service /etc/systemd/system
     - name: Removing 'sinatra.service' file
-      shell:
-        chdir: /home/vagrant/app
-        cmd: rm sinatra.service
-    - name: Enabling and starting Sinatra application
-      shell: systemctl enable --now sinatra.service
+      file:
+        path: /home/vagrant/app/sinatra.service
+        state: absent
+    - name: Enabling Sinatra application
+      systemd:
+        enabled: yes
+        name: sinatra
+    - name: Starting Sinatra application
+      systemd:
+        name: sinatra
+        state: started
