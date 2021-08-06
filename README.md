@@ -21,6 +21,10 @@ LEARNING
 5. sinatra-contrib
 6. thin
 
+## Vagrant Box(es)
+
+1. ubuntu/focal64
+
 ## How to Use
 
 1. Clone this repository to your desired location.
