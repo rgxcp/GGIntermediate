@@ -6,3 +6,15 @@ python:
 branches:
   only:
   - master
+
+# before_install:
+# - openssl aes-256-cbc -K $encrypted_76cb858efea0_key -iv $encrypted_76cb858efea0_iv
+#   -in id_ed25519.enc -out ~/.ssh/id_ed25519 -d
+# - chmod 400 ~/.ssh/id_ed25519
+# 
+# install:
+# - pip install ansible
+# 
+# jobs:
+#   include:
+#   - stage: ansible-playbook -i module5/session2/inventory.yml module5/session2/playbook.yml --user $ANSIBLE_USER --private-key ~/.ssh/id_ed25519
