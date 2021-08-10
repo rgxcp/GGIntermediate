@@ -20,6 +20,7 @@ LEARNING
 4. sinatra
 5. sinatra-contrib
 6. thin
+7. travis
 
 ## Vagrant Box(es)
 
@@ -126,11 +127,7 @@ $ scp -i .vagrant/machines/default/virtualbox/private_key bundle.tar.gz vagrant@
 $ ansible-playbook --inventory inventory.yml --user vagrant --private-key .vagrant/machines/default/virtualbox/private_key playbook.yml
 ```
 
-#### [Session #3](https://github.com/rgxcp/GGIntermediate/tree/master/module5/session3)
-
-```bash
-$ ruby module5/session3/<?>.rb
-```
+#### [Session #3 (No Homework)](https://github.com/rgxcp/GGIntermediate/tree/master/module5/session3)
 
 ### [Module #6](https://github.com/rgxcp/GGIntermediate/tree/master/module6)
 
