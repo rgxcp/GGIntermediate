@@ -135,11 +135,7 @@ $ ansible-playbook --inventory inventory.yml --user vagrant --private-key .vagra
 
 #### [Session #2 (No Homework)](https://github.com/rgxcp/GGIntermediate/tree/master/module6/session2)
 
-#### [Session #3](https://github.com/rgxcp/GGIntermediate/tree/master/module6/session3)
-
-```bash
-$ ruby module6/session3/<?>.rb
-```
+#### [Session #3 (No Homework)](https://github.com/rgxcp/GGIntermediate/tree/master/module6/session3)
 
 ### [Module #7](https://github.com/rgxcp/GGIntermediate/tree/master/module7)
 
