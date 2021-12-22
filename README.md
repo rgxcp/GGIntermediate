@@ -1,4 +1,6 @@
-# 💪 Ruby - Generasi GIGIH Intermediate Level Homeworks
+# 💪 GGIntermediate
+
+Homework for the Generasi GIGIH Intermediate level.
 
 ## Status
 
